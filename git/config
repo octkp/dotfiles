@@ -1,0 +1,16 @@
+[user]
+	name = octkp
+	email = takano_y@kokopelli-inc.com
+[color]
+	ui = true
+[core]
+	editor = vim
+	autocrlf = false
+	ignorecase = false
+	quotepath = false
+[push]
+	default = current
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
