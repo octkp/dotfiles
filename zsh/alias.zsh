@@ -46,7 +46,10 @@ alias zalias="nvim ~/zalias"
 # brewfile
 alias brewfile-create="brew bundle dump"
 alias brewfile-update="brew bundle cleanup --force"
-alias update-app="brew update && brew upgrade && mas upgrade"
+alias update-app="brew update && brew upgrade"
 
 # googledrive
 alias drive="cd ~/Library/CloudStorage/GoogleDrive-octkmr@gmail.com/マイドライブ/"
+
+#phpstorm
+alias phpstorm="open -na \"PhpStorm.app\" --args ."
