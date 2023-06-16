@@ -52,5 +52,6 @@ alias update-app="brew update && brew upgrade"
 alias drive="cd ~/Library/CloudStorage/GoogleDrive-octkmr@gmail.com/マイドライブ/"
 
 #phpstorm
+alias script="open -na \"PhpStorm.app\" --args ~/scripts"
 alias dot="open -na \"PhpStorm.app\" --args ~/dotfiles"
 alias edit="open -na \"PhpStorm.app\" --args ."
