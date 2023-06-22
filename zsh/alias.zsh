@@ -34,9 +34,10 @@ fi
 # docker
 alias d="docker"
 alias dc="docker compose"
+alias horobi="docker compose down --rmi all --volumes --remove-orphans"
 
 # sail
-alias sail="./vendor/bin/sail"
+alias sail="bash sail"
 
 # zsh
 alias zsh="nvim ~/.zshrc"
