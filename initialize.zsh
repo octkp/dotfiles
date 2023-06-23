@@ -22,6 +22,6 @@ if [ ! -e "$HOME/.config/nvim" ]; then
   ln -fs "$HOME/dotfiles/nvim/" "$HOME/.config/nvim"
 fi
 
-if [ ! -e "$HOME/Brewfile" ]; then
-  ln -fs "$HOME/dotfiles/brew/Brewfile" "$HOME/Brewfile"
+if [ ! -e "$HOME/.Brewfile" ]; then
+  ln -fs "$HOME/dotfiles/brew/Brewfile" "$HOME/.Brewfile"
 fi

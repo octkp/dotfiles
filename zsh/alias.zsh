@@ -45,8 +45,9 @@ alias load="source ~/.zshrc"
 alias zalias="nvim ~/zalias"
 
 # brewfile
-alias brewfile-create="brew bundle dump"
-alias brewfile-update="brew bundle cleanup --force"
+alias brewfile-dump="brew bundle dump --force --global"
+alias brewfile-cleanup="brew bundle cleanup --force --global"
+alias brewfile-install="brew bundle --global"
 alias update-app="brew update && brew upgrade"
 
 # googledrive
