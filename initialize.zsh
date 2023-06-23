@@ -25,7 +25,3 @@ fi
 if [ ! -e "$HOME/Brewfile" ]; then
   ln -fs "$HOME/dotfiles/brew/Brewfile" "$HOME/Brewfile"
 fi
-
-if [ ! -e "$HOME/.composer" ]; then
-  ln -fs "$HOME/dotfiles/composer" "$HOME/.composer"
-fi
