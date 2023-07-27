@@ -20,3 +20,10 @@ alias batest="~/Projects/ba/bigadvance/src/xba/phpunit/run.sh --testdox"
 alias batest-up="~/Projects/ba/bigadvance/src/xba/phpunit/up.sh"
 alias batest-down="~/Projects/ba/bigadvance/src/xba/phpunit/down.sh"
 alias batest-cd="cd ~/Projects/ba/bigadvance/src/xba/phpunit"
+alias apitest="docker compose exec phpunit vendor/bin/phpunit --testdox"
+
+# batch
+batch() {
+  cd ~/Projects/ba/badev
+  docker compose run --rm -u webapp -e "XBA_SYSTEM_CODE=$1" xba ./mk refine "$2"
+}

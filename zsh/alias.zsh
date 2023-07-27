@@ -57,3 +57,9 @@ alias drive="cd ~/Library/CloudStorage/GoogleDrive-octkmr@gmail.com/マイド
 alias script="open -na \"PhpStorm.app\" --args ~/scripts"
 alias dot="open -na \"PhpStorm.app\" --args ~/dotfiles"
 alias edit="open -na \"PhpStorm.app\" --args ."
+
+#phpunit
+alias phpunit="vendor/bin/phpunit --testdox --colors"
+
+#php-cs-fixer
+alias phpfix="vendor/bin/php-cs-fixer"
