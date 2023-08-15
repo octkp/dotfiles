@@ -23,7 +23,12 @@ alias batest-cd="cd ~/Projects/ba/bigadvance/src/xba/phpunit"
 alias apitest="docker compose exec phpunit vendor/bin/phpunit --testdox"
 
 # batch
-batch() {
+batch-xba() {
   cd ~/Projects/ba/badev
   docker compose run --rm -u webapp -e "XBA_SYSTEM_CODE=$1" xba ./mk refine "$2"
+}
+
+batch-bam() {
+  cd ~/Projects/ba/badev
+  docker compose run --rm -u webapp bamanager ./mk refine "$1"
 }
