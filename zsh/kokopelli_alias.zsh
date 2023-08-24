@@ -32,3 +32,8 @@ batch-bam() {
   cd ~/Projects/ba/badev
   docker compose run --rm -u webapp bamanager ./mk refine "$1"
 }
+
+badev-up() {
+  cd ~/Projects/ba/badev
+  docker compose up -d bamanager bamanager-bg big-advance-api ba-admin-frontend ba-admin-backend ba-idp xba-front ba-site-frontend chat-api chat-api-bg ba-chat minio
+}
