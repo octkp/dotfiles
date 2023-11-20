@@ -19,8 +19,21 @@ alias pqlogin="dc exec db psql -U webapp -d"
 alias batest="~/Projects/ba/bigadvance/src/xba/phpunit/run.sh --testdox"
 alias batest-up="~/Projects/ba/bigadvance/src/xba/phpunit/up.sh"
 alias batest-down="~/Projects/ba/bigadvance/src/xba/phpunit/down.sh"
+alias batest-coverage="~/Projects/ba/bigadvance/src/xba/phpunit/run.sh --testdox --coverage-html coverage-result"
 alias batest-cd="cd ~/Projects/ba/bigadvance/src/xba/phpunit"
 alias apitest="docker compose exec phpunit vendor/bin/phpunit --testdox"
+alias apitest-coverage="docker compose exec phpunit vendor/bin/phpunit --testdox --coverage-html coverage-result"
+
+#migration
+migration-xba() {
+  cd ~/Projects/ba/bigadvance/src/xba
+  docker/migration.sh "$1"
+}
+
+migration-bam() {
+  cd ~/Projects/ba/bigadvance/src/bamanager
+  docker/migration.sh  bamanager
+}
 
 # batch
 batch-xba() {
@@ -36,4 +49,9 @@ batch-bam() {
 badev-up() {
   cd ~/Projects/ba/badev
   docker compose up -d bamanager bamanager-bg big-advance-api ba-admin-frontend ba-admin-backend ba-idp xba-front ba-site-frontend chat-api chat-api-bg ba-chat minio
+}
+
+badev-down() {
+  cd ~/Projects/ba/badev
+  docker compose down
 }
