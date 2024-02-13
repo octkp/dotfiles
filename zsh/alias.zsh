@@ -4,12 +4,12 @@ alias gd="git diff"
 alias gb="git branch"
 alias gs="git status"
 alias gl="git log"
-alias grs="git reset --soft"
+alias gr="git reset"
 alias gbd="git branch --merged main | grep -vE '^\*|main$' | xargs -I % git branch -d %"
 alias glg="git log --oneline --graph --decorate"
 alias gps="git push"
 alias gpl="git pull"
-alias gcm="git commit -m"
+alias gcm="git commit"
 alias gco="git checkout"
 alias gst="git stash"
 
@@ -37,7 +37,8 @@ alias dc="docker compose"
 alias horobi="docker compose down --rmi all --volumes --remove-orphans"
 
 # sail
-alias sail="bash sail"
+# alias sail="bash sail"
+alias sail="vendor/bin/sail"
 
 # zsh
 alias zsh="nvim ~/.zshrc"

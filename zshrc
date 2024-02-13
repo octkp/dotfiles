@@ -40,3 +40,5 @@ source $ZSHHOME/zinit.zsh
 source $ZSHHOME/fzf.zsh
 # kokopelli original
 source $ZSHHOME/kokopelli_alias.zsh
+# bun completions
+[ -s "/Users/takano_y/.bun/_bun" ] && source "/Users/takano_y/.bun/_bun"

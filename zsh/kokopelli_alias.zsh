@@ -5,7 +5,8 @@ alias kalias="nvim ~/kalias"
 alias ksail="bash sail"
 
 # aws
-alias awslogin="saml2aws login -a koko --session-duration 43200 --force"
+alias awslogin="aws sso login --profile ba_developers"
+alias jump-login-test="ssh -l ec2-user i-066b16d5ec5ec8f8c"
 
 # projects
 alias ba="cd ~/Projects/ba"
@@ -54,4 +55,9 @@ badev-up() {
 badev-down() {
   cd ~/Projects/ba/badev
   docker compose down
+}
+
+badev-restart() {
+  cd ~/Projects/ba/badev
+  docker compose restart bamanager bamanager-bg big-advance-api ba-admin-frontend ba-admin-backend ba-idp xba-front ba-site-frontend chat-api chat-api-bg ba-chat minio
 }
