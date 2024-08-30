@@ -42,3 +42,8 @@ source $ZSHHOME/fzf.zsh
 source $ZSHHOME/kokopelli_alias.zsh
 # bun completions
 [ -s "/Users/takano_y/.bun/_bun" ] && source "/Users/takano_y/.bun/_bun"
+
+# go
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+export GOBIN=$HOME/go/bin
+export PATH=$PATH:$HOME/go/bin

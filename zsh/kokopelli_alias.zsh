@@ -5,8 +5,8 @@ alias kalias="nvim ~/kalias"
 alias ksail="bash sail"
 
 # aws
-alias awslogin="aws sso login --profile ba_developers"
-alias jump-login-test="ssh -l ec2-user i-066b16d5ec5ec8f8c"
+alias awslogin-test="aws sso login --profile ba_developers"
+alias awslogin-prod="aws sso login --profile xba"
 
 # dev
 alias ba="cd ~/dev/ba"
@@ -24,6 +24,7 @@ alias batest-coverage="~/dev/ba/bigadvance/src/xba/phpunit/run.sh --testdox --co
 alias batest-cd="cd ~/dev/ba/bigadvance/src/xba/phpunit"
 alias apitest="docker compose exec phpunit vendor/bin/phpunit --testdox"
 alias apitest-coverage="docker compose exec phpunit vendor/bin/phpunit --testdox --coverage-html coverage-result"
+alias forum-test="docker compose exec forum-api vendor/bin/phpunit --testdox"
 
 #migration
 migration-xba() {
@@ -49,7 +50,7 @@ batch-bam() {
 
 badev-up() {
   cd ~/dev/ba/badev
-  docker compose up -d bamanager bamanager-bg big-advance-api ba-admin-frontend ba-admin-backend ba-idp xba-front ba-site-frontend chat-api chat-api-bg ba-chat minio
+  docker compose up -d bamanager bamanager-bg big-advance-api ba-admin-frontend ba-admin-backend ba-idp xba-front ba-site-frontend minio
 }
 
 badev-down() {
@@ -59,5 +60,5 @@ badev-down() {
 
 badev-restart() {
   cd ~/dev/ba/badev
-  docker compose restart bamanager bamanager-bg big-advance-api ba-admin-frontend ba-admin-backend ba-idp xba-front ba-site-frontend chat-api chat-api-bg ba-chat minio
+  docker compose restart bamanager bamanager-bg big-advance-api ba-admin-frontend ba-admin-backend ba-idp xba-front ba-site-frontend minio
 }

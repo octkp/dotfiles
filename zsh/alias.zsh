@@ -27,7 +27,7 @@ if [[ $(command -v exa) ]]; then
   alias la=ea
   alias ee='exa -aal --icons'
   alias ls=ee
-  alias et='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+  alias et='exa -T -L 3 -a -I "node_modules|.git|.cache|.idea" --icons'
   alias lt=et
 fi
 
@@ -35,6 +35,7 @@ fi
 alias d="docker"
 alias dc="docker compose"
 alias horobi="docker compose down --rmi all --volumes --remove-orphans"
+alias dcr="docker compose rm -fsv"
 
 # sail
 # alias sail="bash sail"
@@ -58,6 +59,9 @@ alias drive="cd ~/Library/CloudStorage/GoogleDrive-octkmr@gmail.com/マイド
 alias script="open -na \"PhpStorm.app\" --args ~/scripts"
 alias dot="open -na \"PhpStorm.app\" --args ~/dotfiles"
 alias edit="open -na \"PhpStorm.app\" --args ."
+
+# cursor
+alias cs="cursor ."
 
 #phpunit
 alias phpunit="vendor/bin/phpunit --testdox --colors"
